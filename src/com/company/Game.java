@@ -2,7 +2,9 @@ package com.company;
 
 public class Game {
     public void startGame() {
-        printScores();
+        User user = new User();
+        Computer comp = new Computer();
+
     }
 
     public void printScores() {
