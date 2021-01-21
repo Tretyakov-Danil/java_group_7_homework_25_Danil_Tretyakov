@@ -4,6 +4,15 @@ import java.util.Random;
 
 public class Computer extends Players{
     private int scores;
+
+    public int getScores() {
+        return scores;
+    }
+
+    public void setScores(int scores) {
+        this.scores = scores;
+    }
+
     @Override
     public String chooseVariant() {
         String variant = "";

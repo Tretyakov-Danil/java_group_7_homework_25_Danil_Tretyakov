@@ -6,6 +6,14 @@ import java.util.Scanner;
 public class User extends Players{
     private int scores;
 
+    public int getScores() {
+        return scores;
+    }
+
+    public void setScores(int scores) {
+        this.scores = scores;
+    }
+
     @Override
     public String chooseVariant() {
         Scanner scan = new Scanner(System.in);
