@@ -14,35 +14,23 @@ public class Computer extends Players{
     }
 
     @Override
-    public String chooseVariant(int typeOfGame) {
+    public String chooseVariant(int numOfChoices) {
         String variant = "";
         Random rnd = new Random();
-        if (typeOfGame == 1){
-            int rndForNormGame = rnd.nextInt(3);
-            switch (rndForNormGame) {
-                case 0:
-                    return Choices.PAPER.toString();
-                case 1:
-                    return Choices.SCISSORS.toString();
-                case 2:
-                    return Choices.ROCK.toString();
-            }
+        int rndVar = rnd.nextInt(numOfChoices);
+        switch (rndVar) {
+            case 0:
+                return Choices.PAPER.toString();
+            case 1:
+                return Choices.SCISSORS.toString();
+            case 2:
+                return Choices.ROCK.toString();
+            case 3:
+                return Choices.LIZARD.toString();
+            case 4:
+                return Choices.SPOCK.toString();
+            default:
+                return variant;
         }
-        else {
-            int rndForComplGame = rnd.nextInt(5);
-            switch (rndForComplGame) {
-                case 0:
-                    return Choices.PAPER.toString();
-                case 1:
-                    return Choices.SCISSORS.toString();
-                case 2:
-                    return Choices.ROCK.toString();
-                case 3:
-                    return Choices.LIZARD.toString();
-                case 4:
-                    return Choices.SPOCK.toString();
-            }
-        }
-        return variant;
     }
 }

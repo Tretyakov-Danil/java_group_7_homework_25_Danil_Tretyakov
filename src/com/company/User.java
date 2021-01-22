@@ -31,13 +31,13 @@ public class User extends Players{
                     }
                 }
                 else {
-                    System.out.print("Enter one of the three variant (rock, paper, scissors, lizard, spock): ");
+                    System.out.print("Enter one of the five variant (rock, paper, scissors, lizard, spock): ");
                     String variant = scan.nextLine();
                     if (variant.toUpperCase().equals(Choices.SCISSORS.toString()) ||
-                            variant.toUpperCase().equals(Choices.ROCK.toString()) ||
-                            variant.toUpperCase().equals(Choices.PAPER.toString()) ||
-                            variant.toUpperCase().equals(Choices.LIZARD.toString()) ||
-                            variant.toUpperCase().equals(Choices.SPOCK.toString())){
+                        variant.toUpperCase().equals(Choices.ROCK.toString()) ||
+                        variant.toUpperCase().equals(Choices.PAPER.toString()) ||
+                        variant.toUpperCase().equals(Choices.LIZARD.toString()) ||
+                        variant.toUpperCase().equals(Choices.SPOCK.toString())){
                         return variant.toUpperCase();
                     }else {
                         throw new InputMismatchException();
