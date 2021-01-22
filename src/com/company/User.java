@@ -15,18 +15,33 @@ public class User extends Players{
     }
 
     @Override
-    public String chooseVariant() {
+    public String chooseVariant(int typeOfGame) {
         Scanner scan = new Scanner(System.in);
         while(true) {
             try {
-                System.out.print("Enter one of the three variant (rock, paper, scissors): ");
-                String variant = scan.nextLine();
-                if (variant.toUpperCase().equals(Choices.SCISSORS.toString()) ||
-                    variant.toUpperCase().equals(Choices.ROCK.toString()) ||
-                    variant.toUpperCase().equals(Choices.PAPER.toString())){
-                    return variant.toUpperCase();
-                }else {
-                    throw new InputMismatchException();
+                if (typeOfGame == 1) {
+                    System.out.print("Enter one of the three variant (rock, paper, scissors): ");
+                    String variant = scan.nextLine();
+                    if (variant.toUpperCase().equals(Choices.SCISSORS.toString()) ||
+                        variant.toUpperCase().equals(Choices.ROCK.toString()) ||
+                        variant.toUpperCase().equals(Choices.PAPER.toString())){
+                        return variant.toUpperCase();
+                    }else {
+                        throw new InputMismatchException();
+                    }
+                }
+                else {
+                    System.out.print("Enter one of the three variant (rock, paper, scissors, lizard, spock): ");
+                    String variant = scan.nextLine();
+                    if (variant.toUpperCase().equals(Choices.SCISSORS.toString()) ||
+                            variant.toUpperCase().equals(Choices.ROCK.toString()) ||
+                            variant.toUpperCase().equals(Choices.PAPER.toString()) ||
+                            variant.toUpperCase().equals(Choices.LIZARD.toString()) ||
+                            variant.toUpperCase().equals(Choices.SPOCK.toString())){
+                        return variant.toUpperCase();
+                    }else {
+                        throw new InputMismatchException();
+                    }
                 }
             }catch (InputMismatchException ex) {
                 System.out.println("Invalid variant. Press 'Enter' to try again.");
